@@ -152,6 +152,17 @@ function manipulateLength(num){
   if (count > digitLimit){
     num = num.toExponential();
   }
+  // size play
+  string = num.toString();
+  count = string.length;
+  if (count > digitLimit){
+    $("span", "#result").css("font-size", "1.5em");
+    console.log("small");
+  }
+  else{
+    $("span", "#result").css("font-size", "4em");
+    console.log("big");
+  }
   // return
   return num;
 }
@@ -163,6 +174,7 @@ function clear(){
   totalFix = null;
   // reset display
   $("#resultBox").text(0);
+  $("span", "#result").css("font-size", "4em");
   // log
   console.log("calculator reseted.");
 }
