@@ -34,6 +34,7 @@ body{
   height: 20vh;
   background-color: #2B2D42;
   color: white;
+  overflow: hidden;
 }
 #result span{
   font-size: 4em;
