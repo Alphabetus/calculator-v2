@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <!-- header -->
+  <head>
+    <!-- charset def -->
+    <meta charset="utf-8">
+    <!-- make responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/theme.css">
+    <!-- font awesome source > below bootsrap -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"/>
+
+    <title>Calculator v2</title>
+  </head>
+  <!-- /header -->
+
+  <!-- body -->
+  <body>
+
+    <!-- main container -->
+    <section id="container_main" class="container-fluid justify-content-center row">
+      <!-- wrapper -->
+      <div class="col-12 col-sm-10 col-md-8 col-xl-6">
+        <!-- row 1 > result -->
+        <div class="row justify-content-center">
+          <div class="col-2 reset">
+            <a href="#" data-button="reset" class="btn btn-primary">
+              <span>
+                <i class="fas fa-eraser"></i>
+              </span>
+            </a>
+          </div>
+          <div id="result" class="col-10 text-right">
+            <span id="resultBox">
+              0
+            </span>
+          </div>
+        </div>
+        <!-- /row 1 > result -->
+
+
+        <!-- row 2 > button grid -->
+        <div class="row row-eq-height justify-content-center">
+          <!-- col 1 > numbers -->
+          <div class="col-8 numberPad">
+            <!-- NOTE:
+              3 rows of 3 buttons each
+            -->
+            <div class="row">
+              <!-- 1 -->
+              <div class="col-4">
+                <a href="#" data-button="number" data-number="1" class="btn btn-primary">
+                  <span>
+                    1
+                  </span>
+                </a>
+              </div>
+              <!-- /1 -->
+              <!-- 2 -->
+              <div class="col-4">
+                <a href="#" data-button="number" data-number="2" class="btn btn-primary">
+                  <span>
+                    2
+                  </span>
+                </a>
+              </div>
+              <!-- /2 -->
+              <!-- 3 -->
+              <div class="col-4">
+                <a href="#" data-button="number" data-number="3" class="btn btn-primary">
+                  <span>
+                    3
+                  </span>
+                </a>
+              </div>
+              <!-- /3 -->
+              <!-- 4 -->
+              <div class="col-4">
+                <a href="#" data-button="number" data-number="4" class="btn btn-primary">
+                  <span>
+                    4
+                  </span>
+                </a>
+              </div>
+              <!-- /4 -->
+              <!-- 5 -->
+              <div class="col-4">
+                <a href="#" data-button="number" data-number="5" class="btn btn-primary">
+                  <span>
+                    5
+                  </span>
+                </a>
+              </div>
+              <!-- /5 -->
+              <!-- 6 -->
+              <div class="col-4">
+                <a href="#" data-button="number" data-number="6" class="btn btn-primary">
+                  <span>
+                    6
+                  </span>
+                </a>
+              </div>
+              <!-- /6 -->
+              <!-- 7 -->
+              <div class="col-4">
+                <a href="#" data-button="number" data-number="7" class="btn btn-primary">
+                  <span>
+                    7
+                  </span>
+                </a>
+              </div>
+              <!-- /7 -->
+              <!-- 8 -->
+              <div class="col-4">
+                <a href="#" data-button="number" data-number="8" class="btn btn-primary">
+                  <span>
+                    8
+                  </span>
+                </a>
+              </div>
+              <!-- /8 -->
+              <!-- 9 -->
+              <div class="col-4">
+                <a href="#" data-button="number" data-number="9" class="btn btn-primary">
+                  <span>
+                    9
+                  </span>
+                </a>
+              </div>
+              <!-- /9 -->
+              <!-- . -->
+              <div class="col-4">
+                <a href="#" data-button="number" data-number="." class="btn btn-primary">
+                  <span>
+                    .
+                  </span>
+                </a>
+              </div>
+              <!-- /. -->
+              <!-- 0 -->
+              <div class="col-8">
+                <a href="#" data-button="number" data-number="0" class="btn btn-primary">
+                  <span>
+                    0
+                  </span>
+                </a>
+              </div>
+              <!-- /0 -->
+            </div>
+          </div>
+          <!-- /col 1 > numbers -->
+
+          <!-- col 2 > operations -->
+          <div class="col-4 operationPad">
+            <!-- row for operations -->
+            <div class="row">
+
+              <!-- + -->
+              <div class="col-6">
+                <a href="#" data-button="operation" data-value="sum" class="btn btn-primary">
+                  <span>
+                    <i class="fas fa-plus"></i>
+                  </span>
+                </a>
+              </div>
+              <!-- /+ -->
+
+              <!-- - -->
+              <div class="col-6">
+                <a href="#" data-button="operation" data-value="subtract" class="btn btn-primary">
+                  <span>
+                    <i class="fas fa-minus"></i>
+                  </span>
+                </a>
+              </div>
+              <!-- /- -->
+
+              <!-- * -->
+              <div class="col-6">
+                <a href="#" data-button="operation" data-value="multiply" class="btn btn-primary">
+                  <span>
+                    <i class="fas fa-times"></i>
+                  </span>
+                </a>
+              </div>
+              <!-- /* -->
+
+              <!-- / -->
+              <div class="col-6">
+                <a href="#" data-button="operation" data-value="divide" class="btn btn-primary">
+                  <span>
+                    <i class="fas fa-divide"></i>
+                  </span>
+                </a>
+              </div>
+              <!-- // -->
+            </div>
+            <!-- /row for operations -->
+            <!-- row for equal -->
+            <div class="row equal">
+              <div class="col-12 equal">
+                <a href="#" data-button="total" class="btn btn-primary">
+                  <span>
+                    <i class="fas fa-equals"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <!-- /row for equial -->
+          </div>
+          <!-- /col 2 > operations -->
+
+        <div>
+        <!-- /row 2 > button grid -->
+      </div>
+      <!-- /wrapper -->
+    </section>
+    <!-- / main container -->
+    <!-- call scripts -->
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="js/popper.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.stellar.js" type="text/javascript"></script>
+    <!-- call custom -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- /call scripts -->
+  </body>
+  <!-- /body -->
+
+</html>

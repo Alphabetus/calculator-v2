@@ -1,0 +1,97 @@
+* {box-sizing: border-box;}
+
+html{
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  position: relative;
+  height: 100%;
+  background-color: #8D99AE;
+}
+
+#container_main {
+  position: absolute;
+  min-height: 90vh;
+  width: 90vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+#container_main .row{
+  width: 100%;
+  margin: auto;
+}
+
+#result{
+  position: relative;
+  height: 20vh;
+  background-color: #2B2D42;
+  color: white;
+}
+#result span{
+  font-size: 4em;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  padding-right: 1vw;
+}
+
+.reset{
+  margin: 0;
+  padding: 0;
+}
+
+.reset > a {
+  border-radius: 0;
+}
+
+.btn{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: 2em;
+}
+
+.numberPad, .operationPad{
+  background-color: black;
+  padding: 0;
+}
+
+.numberPad .col-4, .numberPad .col-8{
+  margin: 0;
+  padding: 0.1em;
+  height: 20vh;
+}
+
+.operationPad .col-6{
+  margin: 0;
+  padding: 0.1em;
+  height: 20vh;
+}
+
+.operationPad .equal{
+  margin: 0;
+  padding: 0.1em;
+  height: 40vh;
+}
+.equal{
+  padding-top: 0.05em!important;
+  padding-left: 0.05em!important;
+  padding-bottom: 0.2em!important;
+}
+.numberPad span, .operationPad span, .reset span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 450;
+}
